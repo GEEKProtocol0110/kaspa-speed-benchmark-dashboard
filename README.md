@@ -1,53 +1,9 @@
-# Kaspa-Speed-Benchmark.... K.S.B......>
-  
-                                        Problem.....
-blockchain performance is often discussed abstractly. Developers need a concrete way to observe 
-real transaction confirmation speed and latency in a live environment.
+# Kaspa Speed Benchmark Dashboard
 
-                                        What This Project Does.....
+**Status: planned benchmark concept.** The collector file `backend/block-watch.js` is empty; this repository does not yet provide a working dashboard or validated speed measurements. [GEEK HQ](https://www.geekprotocol.xyz/) has a separate live network-data companion; see [Kaspa Live Widget](https://github.com/GEEKProtocol0110/kaspa-live-widget).
 
-it collects transaction lifecycle timestamps and displays live metrics through a simple dashboard.
-ihis project measures and visualizes real Kaspa transaction confirmation behavior in real time.
+The proposed tool would collect native transaction lifecycle timestamps from a Kaspa node, distinguish submission from acceptance, and show source, network, sample size and measurement limits. Those stages must be implemented and tested before reporting benchmark results. Block rate alone is not a transaction confirmation measurement.
 
-                                         Why Kaspa.....
+Next engineering work: a reproducible collector, bounded storage, a display and failure/reorg handling using [Kaspa's accepted-transaction integration guide](https://docs.kaspa.org/integrate/accepted-transactions). No benchmark run or financial transaction is performed by this documentation change.
 
- blockDAG architecture enables rapid confirmation behavior feeling closer to internet latency than traditional blockchains. 
- this tool makes that performance observable, measurable, and developer-friendly.
-
- ..........................................................................................................................
-
-                                   Architecture (High Level).....
-
-A lightweight collector connects to a Kaspa node.................................>
-Transaction events are timestamped through their lifecycle.......................>
-Metrics are streamed to a dashboard for live visualization.......................*
-
-                                    How to Run.....
-
-Start a local or remote Kaspa node...............................................>
-Run the collector service........................................................>
-Launch the dashboard.............................................................>
-Trigger transaction activity and observe metrics.................................*
-
-                                    Demo Flow.....
-
-Start services...................................................................>
-Generate or observe transaction activity.........................................>
-Watch confirmation metrics update live...........................................>
-
-                                    Metrics Captured.....
-
-Time to first observation........................................................>
-Time to confirmation.............................................................>
-Transaction throughput over time.................................................*
-
-                                    Limitations.....
-
-Focused on live observation rather than long-term historical analysis............>
-Dashboard prioritizes clarity over advanced analytics............................*
-
-                                    Future Work.....
-
-Historical dataset comparisons...................................................>
-Exportable benchmark results.....................................................>
-Developer tooling integrations...................................................*
+See [LICENCE](LICENCE).
